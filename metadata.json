@@ -1,0 +1,7 @@
+{
+  "name": "PromAutomat",
+  "description": "Industrial Automation landing page with Voice Assistant",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
