@@ -41,9 +41,15 @@ export default function VoiceWidget() {
     }
     if (inputAudioContextRef.current) inputAudioContextRef.current.close();
     if (outputAudioContextRef.current) outputAudioContextRef.current.close();
+    
     if (sessionRef.current) {
-        // session.close() if available in SDK, though usually just dropping reference is enough for web
-        // sessionRef.current.close(); 
+        // Close the session if the method exists
+        try {
+            sessionRef.current.close();
+        } catch (e) {
+            console.warn("Failed to close session explicitly:", e);
+        }
+        sessionRef.current = null;
     }
     setIsConnected(false);
     setVolume(0);
@@ -161,7 +167,10 @@ export default function VoiceWidget() {
         }
       });
       
-      sessionRef.current = sessionPromise;
+      // Store the resolved session for cleanup
+      sessionPromise.then(session => {
+          sessionRef.current = session;
+      });
 
       // Start Visualizer Loop
       const updateVisualizer = () => {

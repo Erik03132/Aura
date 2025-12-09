@@ -1,4 +1,7 @@
-import { Blob } from '@google/genai';
+export type Blob = {
+  data: string;
+  mimeType: string;
+};
 
 export function createPcmBlob(data: Float32Array): Blob {
   const l = data.length;
