@@ -337,8 +337,8 @@ export default function App() {
                 <div className="text-industrial-400 mt-4">io_mapping:</div>
                 <div className="pl-4 border-l border-slate-800 ml-1">
                    <div className="mb-1"><span className="text-purple-400">- tag:</span> <span className="text-white">"SENSOR_PRESS_IN"</span></div>
-                   <div className="pl-4 mb-1"><span class="text-slate-400">addr:</span> <span className="text-white">"%IW100"</span></div>
-                   <div className="mb-1 mt-2"><span class="text-purple-400">- tag:</span> <span className="text-white">"MOTOR_DRIVE_START"</span></div>
+                   <div className="pl-4 mb-1"><span className="text-slate-400">addr:</span> <span className="text-white">"%IW100"</span></div>
+                   <div className="mb-1 mt-2"><span className="text-purple-400">- tag:</span> <span className="text-white">"MOTOR_DRIVE_START"</span></div>
                 </div>
 
                 <div className="text-industrial-400 mt-4">automation_logic:</div>

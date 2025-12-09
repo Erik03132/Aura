@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Mic, MicOff, X, MoreHorizontal, Terminal, Activity, Volume2 } from 'lucide-react';
+import { Mic, MicOff, X, Terminal, Activity, Volume2 } from 'lucide-react';
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
 import { createPcmBlob, decodeAudioData, encode } from '../utils/audioUtils';
 
